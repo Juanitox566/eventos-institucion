@@ -169,11 +169,11 @@ export default function EventManagerApp() {
           <h1 className="text-3xl font-bold text-center text-blue-800">Sistema de Gestión Educativa</h1>
           
             <div className="flex justify-center space-x-4 mb-6">
-            <select value={lang} onChange={(e) => setLang(e.target.value)} className="border p-1 rounded">
+            <select value={lang} onChange={(e) => setLang(e.target.value)} className="text-black rounded shadow border p-1 rounded">
             <option value="es">Español</option>
             <option value="en">English</option>
           </select>
-          <button onClick={() => speakText(t.title)} className="px-2 py-1 bg-gray-300 rounded">🔊 {t.escuchar}</button>
+          <button onClick={() => speakText(t.title)} className="px-2 py-1 bg-brown-300 rounded">🔊 {t.escuchar}</button>
         </div>
      
       <div className="flex justify-center space-x-4">
@@ -205,7 +205,7 @@ export default function EventManagerApp() {
 )}
 
   {view === "eventos" && (
-        <div className="bg-red rounded-lg p-6 shadow-md">
+        <div className="bg-white rounded-lg p-6 shadow-md">
           <h2 className="text-2xl font-semibold text-blue-700 mb-4">Registrar Evento</h2>
           <form onSubmit={handleEventSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {Object.keys(eventForm).map((key) => (
@@ -260,6 +260,7 @@ export default function EventManagerApp() {
               <strong className="text-green-800">{loc.titulo}</strong>
               <p>Dirección: {loc.direccion}</p>
               <p>Coordenadas: {loc.coordenadas}</p>
+              className="text-black">
             </div>
           ))}
         </div>
