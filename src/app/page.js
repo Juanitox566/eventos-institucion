@@ -178,10 +178,32 @@ export default function EventManagerApp() {
       </div>
 
       <div className="space-x-2">
+        <button onClick={() => setView("ayuda")} className="px-4 py-2 bg-orange-500 text-white rounded">🎥 {lang === "es" ? "Ayuda" : "Help"}</button>
         <button onClick={() => setView("eventos")} className="px-4 py-2 bg-blue-500 text-white rounded">{t.eventos}</button>
         <button onClick={() => setView("ubicaciones")} className="px-4 py-2 bg-green-500 text-white rounded">{t.ubicaciones}</button>
         <button onClick={() => setView("contactos")} className="px-4 py-2 bg-purple-500 text-white rounded">{t.contactos}</button>
       </div>
+
+      {view === "ayuda" && (
+  <div>
+    <h2 className="text-xl font-semibold mb-4">{lang === "es" ? "Video de Ayuda" : "Help Video"}</h2>
+    <p className="mb-4">
+      {lang === "es"
+        ? "Este video te mostrará cómo utilizar la aplicación paso a paso."
+        : "This video will show you step-by-step how to use the application."}
+    </p>
+    <div className="aspect-w-16 aspect-h-9">
+      <iframe
+        src="https://www.youtube.com/watch?v=Lok7GmhMncY"
+        title="Video tutorial"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        className="w-full h-96 rounded shadow-lg"
+      ></iframe>
+    </div>
+  </div>
+)}
 
              {view === "eventos" && (
         <div>
