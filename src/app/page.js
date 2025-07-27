@@ -197,7 +197,7 @@ export default function EventManagerApp() {
     </p>
     <div className="aspect-w-16 aspect-h-9">
       <iframe
-        src="https://www.youtube.com/embed/yGUQTSv13OE"
+        src="https://www.youtube.com/embed/W7KD-8Zu_8o"
         title="Video tutorial"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
