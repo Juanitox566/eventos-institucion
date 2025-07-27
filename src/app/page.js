@@ -224,7 +224,6 @@ export default function EventManagerApp() {
                 placeholder={key}
                 value={eventForm[key]}
                 onChange={handleChange(setEventForm)}
-                className="border p-2 rounded shadow-sm"
                 className="border p-2 rounded bg-gray-100 text-gray-800 placeholder-gray-600"
               />
             ))}
@@ -277,7 +276,6 @@ export default function EventManagerApp() {
                 placeholder={key}
                 value={locationForm[key]}
                 onChange={handleChange(setLocationForm)}
-                className="border p-2 rounded shadow-sm"
                 className="border p-2 rounded bg-gray-100 text-gray-800 placeholder-gray-600"
               />
             ))}
@@ -320,7 +318,6 @@ export default function EventManagerApp() {
                 placeholder={key}
                 value={contactForm[key]}
                 onChange={handleChange(setContactForm)}
-                className="border p-2 rounded shadow-sm"
                 className="border p-2 rounded bg-gray-100 text-gray-800 placeholder-gray-600"
               />
             ))}
