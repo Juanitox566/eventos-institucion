@@ -193,7 +193,7 @@ export default function EventManagerApp() {
     </p>
     <div className="aspect-w-16 aspect-h-9">
       <iframe
-        src="https://www.youtube.com/embed/watch?v=yRTQ-tcO4gc"
+        src="https://www.youtube.com/embed/watch?v=YNAWnt9jIRo"
         title="Video tutorial"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -259,7 +259,7 @@ export default function EventManagerApp() {
             <div key={i} className="border p-4 rounded bg-green-50 shadow-sm mt-2">
               <strong className="text-green-800">{loc.titulo}</strong>
               <p>Dirección: {loc.direccion}</p>
-              <p>Coordenadas: {loc.coordenadas} className="text-green-800"</p>
+              <p>Coordenadas: {loc.coordenadas}</p>
             </div>
           ))}
         </div>
