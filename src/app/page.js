@@ -173,7 +173,7 @@ export default function EventManagerApp() {
             <option value="es">Español</option>
             <option value="en">English</option>
           </select>
-          <button onClick={() => speakText(t.title)} className="px-2 py-1 bg-brown-300 rounded">🔊 {t.escuchar}</button>
+          <button onClick={() => speakText(t.title)} className="px-2 py-1 bg-gray-300 text-black rounded">🔊 {t.escuchar}</button>
         </div>
      
       <div className="flex justify-center space-x-4">
@@ -193,7 +193,7 @@ export default function EventManagerApp() {
     </p>
     <div className="aspect-w-16 aspect-h-9">
       <iframe
-        src="https://www.youtube.com/embed/watch?v=YNAWnt9jIRo"
+        src="https://www.youtube.com/embed/YNAWnt9jIRo"
         title="Video tutorial"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -256,7 +256,7 @@ export default function EventManagerApp() {
 
           <h2 className="text-xl font-semibold mt-6 text-green-700">Ubicaciones Registradas</h2>
           {locations.map((loc, i) => (
-            <div key={i} className="border p-4 rounded bg-green-50 shadow-sm mt-2">
+            <div key={i} className="border p-4 rounded text-black bg-green-50 shadow-sm mt-2">
               <strong className="text-green-800">{loc.titulo}</strong>
               <p>Dirección: {loc.direccion}</p>
               <p>Coordenadas: {loc.coordenadas}</p>
