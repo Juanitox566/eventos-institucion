@@ -87,16 +87,16 @@ export default function EventManagerApp() {
   const [contacts, setContacts] = useState([]);
 
   const [eventForm, setEventForm] = useState({
-    titulo: "",
-    invitados: "",
-    fecha: "",
-    hora: "",
-    zonaHoraria: "",
-    descripcion: "",
-    repeticion: "",
-    recordatorio: "",
-    clasificacion: "",
-    lugar: "",
+    Titulo: "",
+    Invitados: "",
+    Fecha: "",
+    Hora: "",
+    ZonaHoraria: "",
+    Descripcion: "",
+    Repeticion: "",
+    Recordatorio: "",
+    Clasificacion: "",
+    Lugar: "",
   });
 
   const [locationForm, setLocationForm] = useState({
@@ -165,11 +165,14 @@ export default function EventManagerApp() {
   };
 
   return (
-    <div className="p-6 space-y-6">
-      <div className="flex justify-between items-center">
-        <h1 className="text-2xl font-bold">{t.title}</h1>
+    <div className="min-h-screen bg-gradient-to-br from-blue-100 via-white to-purple-100 p-6 space-y-6 font-sans">
+        <h1 className="text-4xl font-extrabold text-center text-indigo-800 mb-4">Sistema de Gestión Educativa</h1>
         <div className="space-x-2">
-          <select value={lang} onChange={(e) => setLang(e.target.value)} className="border p-1 rounded">
+        <div className="p-6 space-y-6 bg-gradient-to-br from-gray-100 to-blue-100 min-h-screen">
+        <h1 className="text-3xl font-bold text-center text-blue-800">Sistema de Gestión Educativa</h1>
+          
+            <div className="flex justify-center space-x-4 mb-6">
+            <select value={lang} onChange={(e) => setLang(e.target.value)} className="border p-1 rounded">
             <option value="es">Español</option>
             <option value="en">English</option>
           </select>
@@ -177,11 +180,15 @@ export default function EventManagerApp() {
         </div>
       </div>
 
-      <div className="space-x-2">
-        <button onClick={() => setView("ayuda")} className="px-4 py-2 bg-orange-500 text-white rounded">🎥 {lang === "es" ? "Ayuda" : "Help"}</button>
-        <button onClick={() => setView("eventos")} className="px-4 py-2 bg-blue-500 text-white rounded">{t.eventos}</button>
-        <button onClick={() => setView("ubicaciones")} className="px-4 py-2 bg-green-500 text-white rounded">{t.ubicaciones}</button>
-        <button onClick={() => setView("contactos")} className="px-4 py-2 bg-purple-500 text-white rounded">{t.contactos}</button>
+      <div className="flex justify-center space-x-4 mb-6">
+        <button onClick={() => setView("eventos")} className={`px-4 py-2 rounded-lg shadow-md transition-colors ${view === "eventos" ? "bg-blue-600 text-white" : "bg-blue-200 text-blue-900"}`}>Eventos</button>
+        <button onClick={() => setView("ubicaciones")} className={`px-4 py-2 rounded-lg shadow-md transition-colors ${view === "ubicaciones" ? "bg-green-600 text-white" : "bg-green-200 text-green-900"}`}>Ubicaciones</button>
+        <button onClick={() => setView("contactos")} className={`px-4 py-2 rounded-lg shadow-md transition-colors ${view === "contactos" ? "bg-purple-600 text-white" : "bg-purple-200 text-purple-900"}`}>Contactos</button>
+     
+      <div className="flex justify-center space-x-4">
+        <button onClick={() => setView("eventos")} className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded shadow">Eventos</button>
+        <button onClick={() => setView("ubicaciones")} className="px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded shadow">Ubicaciones</button>
+        <button onClick={() => setView("contactos")} className="px-4 py-2 bg-purple-500 hover:bg-purple-600 text-white rounded shadow">Contactos</button>
       </div>
 
       {view === "ayuda" && (
@@ -194,7 +201,7 @@ export default function EventManagerApp() {
     </p>
     <div className="aspect-w-16 aspect-h-9">
       <iframe
-        src="https://www.youtube.com/watch?v=Lok7GmhMncY"
+        src="https://www.youtube.com/watch?v=yRTQ-tcO4gc"
         title="Video tutorial"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
