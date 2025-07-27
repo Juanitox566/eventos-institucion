@@ -175,7 +175,6 @@ export default function EventManagerApp() {
           </select>
           <button onClick={() => speakText(t.title)} className="px-2 py-1 bg-gray-300 rounded">🔊 {t.escuchar}</button>
         </div>
-      </div>
      
       <div className="flex justify-center space-x-4">
         <button onClick={() => setView("ayuda")} className="px-4 py-2 bg-orange-500 text-white rounded">🎥 {lang === "es" ? "Ayuda" : "Help"}</button>
