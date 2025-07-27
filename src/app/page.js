@@ -223,7 +223,7 @@ export default function EventManagerApp() {
 
           <h2 className="text-xl font-semibold mt-6 text-blue-700">Eventos Registrados</h2>
           {events.map((event, i) => (
-            <div key={i} className="border p-4 rounded bg-blue-50 shadow-sm mt-2">
+            <div key={i} className="border p-4 rounded text-black bg-blue-50 shadow-sm mt-2">
               <strong className="text-blue-800">{event.titulo}</strong>
               <p>Invitados: {event.invitados}</p>
               <p>Fecha y hora: {event.fecha} {event.hora} ({event.zonaHoraria})</p>
@@ -284,7 +284,7 @@ export default function EventManagerApp() {
 
           <h2 className="text-xl font-semibold mt-6 text-purple-700">Contactos Registrados</h2>
           {contacts.map((contact, i) => (
-            <div key={i} className="border p-4 rounded bg-purple-50 shadow-sm mt-2">
+            <div key={i} className="border p-4 rounded text-black bg-purple-50 shadow-sm mt-2">
               <strong className="text-purple-800">{contact.saludo} {contact.nombreCompleto}</strong>
               <p>ID: {contact.identificacion}</p>
               <p>Email: {contact.correo}</p>
