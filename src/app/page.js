@@ -260,7 +260,7 @@ export default function EventManagerApp() {
               <strong className="text-green-800">{loc.titulo}</strong>
               <p>Dirección: {loc.direccion}</p>
               <p>Coordenadas: {loc.coordenadas}</p>
-              className="text-black">
+              className="text-black"
             </div>
           ))}
         </div>
