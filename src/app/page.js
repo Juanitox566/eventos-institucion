@@ -211,94 +211,149 @@ export default function EventManagerApp() {
     </div>
   </div>
 )}
-
-             {view === "eventos" && (
-        <div>
-          <h2 className="text-xl font-semibold">{t.registrarEvento}</h2>
+ {view === "eventos" && (
+        <section className="bg-white shadow-lg rounded-xl p-6">
+          <h2 className="text-2xl font-semibold text-blue-800 mb-4">Registrar Evento</h2>
+        <div className="bg-white rounded-lg p-6 shadow-md">
+          <h2 className="text-2xl font-semibold text-blue-700 mb-4">Registrar Evento</h2>
           <form onSubmit={handleEventSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {Object.keys(eventForm).map((key) => (
               <input
                 key={key}
                 name={key}
-                placeholder={t.placeholder[key]}
+                placeholder={key}
                 value={eventForm[key]}
                 onChange={handleChange(setEventForm)}
-                className="p-2 border border-gray-400 rounded bg-white text-black"
+                className="border p-2 rounded shadow-sm"
+                className="border p-2 rounded bg-gray-100 text-gray-800 placeholder-gray-600"
               />
             ))}
-            <button type="submit" className="col-span-full bg-blue-500 text-white py-2 rounded">{t.btnRegistrarEvento}</button>
+            <button type="submit" className="col-span-full bg-blue-600 hover:bg-blue-700 text-white font-medium p-2 rounded">Registrar Evento</button>
+            <button type="submit" className="col-span-full bg-blue-600 hover:bg-blue-700 text-white p-2 rounded shadow">Registrar Evento</button>
           </form>
 
-          <h3 className="mt-6 text-lg font-semibold">{t.eventosRegistrados}</h3>
-          <ul className="space-y-2">
-            {events.map((ev, i) => (
-              <li key={i} className="p-4 border rounded bg-blue-50">
-                <strong>{t.placeholder.titulo}:</strong> {ev.titulo} <br />
-                <strong>{t.placeholder.descripcion}:</strong> {ev.descripcion}
-              </li>
+          <h2 className="text-xl font-semibold text-blue-800 mt-6">Eventos Registrados</h2>
+          <div className="grid gap-4 mt-2">
+            {events.map((event, i) => (
+              <div key={i} className="border p-4 rounded-lg bg-blue-50 shadow">
+                <strong className="text-lg text-blue-900">{event.titulo}</strong>
+                <p>Invitados: {event.invitados}</p>
+                <p>Fecha y hora: {event.fecha} {event.hora} ({event.zonaHoraria})</p>
+                <p>Descripción: {event.descripcion}</p>
+                <p>Repetición: {event.repeticion}</p>
+                <p>Recordatorio: {event.recordatorio}</p>
+                <p>Clasificación: {event.clasificacion}</p>
+                <p>Lugar: {event.lugar}</p>
+              </div>
             ))}
-          </ul>
+          </div>
+        </section>
+          <h2 className="text-xl font-semibold mt-6 text-blue-700">Eventos Registrados</h2>
+          {events.map((event, i) => (
+            <div key={i} className="border p-4 rounded bg-blue-50 shadow-sm mt-2">
+              <strong className="text-blue-800">{event.titulo}</strong>
+              <p>Invitados: {event.invitados}</p>
+              <p>Fecha y hora: {event.fecha} {event.hora} ({event.zonaHoraria})</p>
+              <p>Descripción: {event.descripcion}</p>
+              <p>Repetición: {event.repeticion}</p>
+              <p>Recordatorio: {event.recordatorio}</p>
+              <p>Clasificación: {event.clasificacion}</p>
+              <p>Lugar: {event.lugar}</p>
+            </div>
+          ))}
         </div>
       )}
 
       {view === "ubicaciones" && (
-        <div>
-          <h2 className="text-xl font-semibold">{t.registrarUbicacion}</h2>
+        <section className="bg-white shadow-lg rounded-xl p-6">
+          <h2 className="text-2xl font-semibold text-green-800 mb-4">Registrar Ubicación</h2>
+        <div className="bg-white rounded-lg p-6 shadow-md">
+          <h2 className="text-2xl font-semibold text-green-700 mb-4">Registrar Ubicación</h2>
           <form onSubmit={handleLocationSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {Object.keys(locationForm).map((key) => (
               <input
                 key={key}
                 name={key}
-                placeholder={t.placeholder[key]}
+                placeholder={key}
                 value={locationForm[key]}
                 onChange={handleChange(setLocationForm)}
-                className="p-2 border border-gray-400 rounded bg-white text-black"
+                className="border p-2 rounded shadow-sm"
+                className="border p-2 rounded bg-gray-100 text-gray-800 placeholder-gray-600"
               />
             ))}
-            <button type="submit" className="col-span-full bg-green-500 text-white py-2 rounded">{t.btnRegistrarUbicacion}</button>
+            <button type="submit" className="col-span-full bg-green-600 hover:bg-green-700 text-white font-medium p-2 rounded">Registrar Ubicación</button>
+            <button type="submit" className="col-span-full bg-green-600 hover:bg-green-700 text-white p-2 rounded shadow">Registrar Ubicación</button>
           </form>
 
-          <h3 className="mt-6 text-lg font-semibold">{t.ubicacionesRegistradas}</h3>
-          <ul className="space-y-2">
+          <h2 className="text-xl font-semibold text-green-800 mt-6">Ubicaciones Registradas</h2>
+          <div className="grid gap-4 mt-2">
             {locations.map((loc, i) => (
-              <li key={i} className="p-4 border rounded bg-green-50">
-                <strong>{t.placeholder.titulo}:</strong> {loc.titulo} <br />
-                <strong>{t.placeholder.direccion}:</strong> {loc.direccion}
-              </li>
+              <div key={i} className="border p-4 rounded-lg bg-green-50 shadow">
+                <strong className="text-lg text-green-900">{loc.titulo}</strong>
+                <p>Dirección: {loc.direccion}</p>
+                <p>Coordenadas: {loc.coordenadas}</p>
+              </div>
             ))}
-          </ul>
+          </div>
+        </section>
+          <h2 className="text-xl font-semibold mt-6 text-green-700">Ubicaciones Registradas</h2>
+          {locations.map((loc, i) => (
+            <div key={i} className="border p-4 rounded bg-green-50 shadow-sm mt-2">
+              <strong className="text-green-800">{loc.titulo}</strong>
+              <p>Dirección: {loc.direccion}</p>
+              <p>Coordenadas: {loc.coordenadas}</p>
+            </div>
+          ))}
         </div>
       )}
 
       {view === "contactos" && (
-        <div>
-          <h2 className="text-xl font-semibold">{t.registrarContacto}</h2>
+        <section className="bg-white shadow-lg rounded-xl p-6">
+          <h2 className="text-2xl font-semibold text-purple-800 mb-4">Registrar Contacto</h2>
+        <div className="bg-white rounded-lg p-6 shadow-md">
+          <h2 className="text-2xl font-semibold text-purple-700 mb-4">Registrar Contacto</h2>
           <form onSubmit={handleContactSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {Object.keys(contactForm).map((key) => (
               <input
                 key={key}
                 name={key}
-                placeholder={t.placeholder[key]}
+                placeholder={key}
                 value={contactForm[key]}
                 onChange={handleChange(setContactForm)}
-                className="p-2 border border-gray-400 rounded bg-white text-black"
+                className="border p-2 rounded shadow-sm"
+                className="border p-2 rounded bg-gray-100 text-gray-800 placeholder-gray-600"
               />
             ))}
-            <button type="submit" className="col-span-full bg-purple-500 text-white py-2 rounded">{t.btnRegistrarContacto}</button>
+            <button type="submit" className="col-span-full bg-purple-600 hover:bg-purple-700 text-white font-medium p-2 rounded">Registrar Contacto</button>
+            <button type="submit" className="col-span-full bg-purple-600 hover:bg-purple-700 text-white p-2 rounded shadow">Registrar Contacto</button>
           </form>
 
-          <h3 className="mt-6 text-lg font-semibold">{t.contactosRegistrados}</h3>
-          <ul className="space-y-2">
-            {contacts.map((con, i) => (
-              <li key={i} className="p-4 border rounded bg-purple-50">
-                <strong>{t.placeholder.nombreCompleto}:</strong> {con.nombreCompleto} <br />
-                <strong>{t.placeholder.correo}:</strong> {con.correo}
-              </li>
+          <h2 className="text-xl font-semibold text-purple-800 mt-6">Contactos Registrados</h2>
+          <div className="grid gap-4 mt-2">
+            {contacts.map((contact, i) => (
+              <div key={i} className="border p-4 rounded-lg bg-purple-50 shadow">
+                <strong className="text-lg text-purple-900">{contact.saludo} {contact.nombreCompleto}</strong>
+                <p>ID: {contact.identificacion}</p>
+                <p>Email: {contact.correo}</p>
+                <p>Teléfono: {contact.telefono}</p>
+                <p>Foto: {contact.fotografia}</p>
+              </div>
             ))}
-          </ul>
+          </div>
+        </section>
+          <h2 className="text-xl font-semibold mt-6 text-purple-700">Contactos Registrados</h2>
+          {contacts.map((contact, i) => (
+            <div key={i} className="border p-4 rounded bg-purple-50 shadow-sm mt-2">
+              <strong className="text-purple-800">{contact.saludo} {contact.nombreCompleto}</strong>
+              <p>ID: {contact.identificacion}</p>
+              <p>Email: {contact.correo}</p>
+              <p>Teléfono: {contact.telefono}</p>
+              <p>Foto: {contact.fotografia}</p>
+            </div>
+          ))}
         </div>
       )}
-
+       
     </div>
   );
 }
