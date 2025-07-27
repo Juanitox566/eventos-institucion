@@ -87,16 +87,16 @@ export default function EventManagerApp() {
   const [contacts, setContacts] = useState([]);
 
   const [eventForm, setEventForm] = useState({
-    Titulo: "",
-    Invitados: "",
-    Fecha: "",
-    Hora: "",
-    ZonaHoraria: "",
-    Descripcion: "",
-    Repeticion: "",
-    Recordatorio: "",
-    Clasificacion: "",
-    Lugar: "",
+    titulo: "",
+    invitados: "",
+    fecha: "",
+    hora: "",
+    zonaHoraria: "",
+    descripcion: "",
+    repeticion: "",
+    recordatorio: "",
+    clasificacion: "",
+    lugar: "",
   });
 
   const [locationForm, setLocationForm] = useState({
