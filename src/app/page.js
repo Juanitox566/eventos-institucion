@@ -177,16 +177,16 @@ export default function EventManagerApp() {
         </div>
      
       <div className="flex justify-center space-x-4">
-        <button onClick={() => setView("ayuda")} className="px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded shadow">🎥 {lang === "es" ? "Ayuda" : "Help"}</button>
-        <button onClick={() => setView("eventos")} className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded shadow">Eventos</button>
-        <button onClick={() => setView("ubicaciones")} className="px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded shadow">Ubicaciones</button>
-        <button onClick={() => setView("contactos")} className="px-4 py-2 bg-purple-500 hover:bg-purple-600 text-white rounded shadow">Contactos</button>
+        <button onClick={() => setView("ayuda")} className="px-4 py-2 bg-orange-700 hover:bg-orange-800 text-white rounded shadow">🎥 {lang === "es" ? "Ayuda" : "Help"}</button>
+        <button onClick={() => setView("eventos")} className="px-4 py-2 bg-blue-800 hover:bg-blue-900 text-white rounded shadow">Eventos</button>
+        <button onClick={() => setView("ubicaciones")} className="px-4 py-2 bg-green-700 hover:bg-green-800 text-white rounded shadow">Ubicaciones</button>
+        <button onClick={() => setView("contactos")} className="px-4 py-2 bg-purple-700 hover:bg-purple-800 text-white rounded shadow">Contactos</button>
       </div>
 
       {view === "ayuda" && (
   <div>
-    <h2 className="text-xl font-semibold mb-4">{lang === "es" ? "Video de Ayuda" : "Help Video"}</h2>
-    <p className="mb-4">
+    <h2 className="text-xl text-black font-semibold mb-4">{lang === "es" ? "Video de Ayuda" : "Help Video"}</h2>
+    <p className="mb-4 text-black">
       {lang === "es"
         ? "Este video te mostrará cómo utilizar la aplicación paso a paso."
         : "This video will show you step-by-step how to use the application."}
