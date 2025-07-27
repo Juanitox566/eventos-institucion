@@ -169,7 +169,11 @@ export default function EventManagerApp() {
           <h1 className="text-3xl font-bold text-center text-blue-800">Sistema de Gestión Educativa</h1>
           
             <div className="flex justify-center space-x-4 mb-6">
-            <select value={lang} onChange={(e) => setLang(e.target.value)} className="text-black rounded shadow border p-1 rounded">
+            <select aria-label="Seleccionar idioma"
+            value={lang}
+            onChange={(e) => setLang(e.target.value)}
+            className="text-black rounded shadow border p-1"
+            >
             <option value="es">Español</option>
             <option value="en">English</option>
           </select>
