@@ -259,8 +259,7 @@ export default function EventManagerApp() {
             <div key={i} className="border p-4 rounded bg-green-50 shadow-sm mt-2">
               <strong className="text-green-800">{loc.titulo}</strong>
               <p>Dirección: {loc.direccion}</p>
-              <p>Coordenadas: {loc.coordenadas}</p>
-              className="text-black"
+              <p>Coordenadas: {loc.coordenadas} className="text-green-800"</p>
             </div>
           ))}
         </div>
