@@ -165,11 +165,8 @@ export default function EventManagerApp() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-100 via-white to-purple-100 p-6 space-y-6 font-sans">
-        <h1 className="text-4xl font-extrabold text-center text-indigo-800 mb-4">Sistema de Gestión Educativa</h1>
-        <div className="space-x-2">
-        <div className="p-6 space-y-6 bg-gradient-to-br from-gray-100 to-blue-100 min-h-screen">
-        <h1 className="text-3xl font-bold text-center text-blue-800">Sistema de Gestión Educativa</h1>
+          <div className="p-6 space-y-6 bg-gradient-to-br from-gray-100 to-blue-100 min-h-screen">
+          <h1 className="text-3xl font-bold text-center text-blue-800">Sistema de Gestión Educativa</h1>
           
             <div className="flex justify-center space-x-4 mb-6">
             <select value={lang} onChange={(e) => setLang(e.target.value)} className="border p-1 rounded">
@@ -179,11 +176,6 @@ export default function EventManagerApp() {
           <button onClick={() => speakText(t.title)} className="px-2 py-1 bg-gray-300 rounded">🔊 {t.escuchar}</button>
         </div>
       </div>
-
-      <div className="flex justify-center space-x-4 mb-6">
-        <button onClick={() => setView("eventos")} className={`px-4 py-2 rounded-lg shadow-md transition-colors ${view === "eventos" ? "bg-blue-600 text-white" : "bg-blue-200 text-blue-900"}`}>Eventos</button>
-        <button onClick={() => setView("ubicaciones")} className={`px-4 py-2 rounded-lg shadow-md transition-colors ${view === "ubicaciones" ? "bg-green-600 text-white" : "bg-green-200 text-green-900"}`}>Ubicaciones</button>
-        <button onClick={() => setView("contactos")} className={`px-4 py-2 rounded-lg shadow-md transition-colors ${view === "contactos" ? "bg-purple-600 text-white" : "bg-purple-200 text-purple-900"}`}>Contactos</button>
      
       <div className="flex justify-center space-x-4">
         <button onClick={() => setView("eventos")} className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded shadow">Eventos</button>
@@ -211,6 +203,7 @@ export default function EventManagerApp() {
     </div>
   </div>
 )}
+
   {view === "eventos" && (
         <div className="bg-white rounded-lg p-6 shadow-md">
           <h2 className="text-2xl font-semibold text-blue-700 mb-4">Registrar Evento</h2>
